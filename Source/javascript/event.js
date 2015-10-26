@@ -1,4 +1,6 @@
 var _event = false;
+var _click = new Image();
+_click.src = "src/click.png";
 
 
 function startEvent() {
@@ -7,6 +9,7 @@ function startEvent() {
     _memo_ori = _walk_orie;
     _memo_mapID = _map_id;
     _layer_2.onmousedown = null;
+    _last_event = false;
     _event = false;
 
     if (_map_id == 1) {
@@ -49,6 +52,7 @@ function startEvent() {
 
 function endEvent() {
 
+
     _map_id = _memo_mapID;
     updateDoor(_map_id);
 
@@ -69,8 +73,9 @@ function checkEvent(x, y) {
 }
 
 function drawEvent(x, y) {
-    _ctx_2.fillStyle = "yellow";
-    _ctx_2.font = "30px Verdana";
-    _ctx_2.fillText("Click!?", getX(x) - C / 2, getY(y) + 30 - 2 * C);
+    //_ctx_2.fillStyle = "yellow";
+    //_ctx_2.font = "30px Verdana";
+    //_ctx_2.fillText("Click!?", getX(x) - C / 2, getY(y) + 30 - 2 * C);
+    _ctx_2.drawImage(_click, getX(x) - C, getY(y) - 2 * C);
 
 }
