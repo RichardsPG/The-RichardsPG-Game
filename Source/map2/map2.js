@@ -8,6 +8,7 @@ var _map2_pair = [1,1,2,6,8,7,2,6,5,3,4,5,7,4,3,8];
 var _map2_card1 = -1;
 var _map2_card2 = -1;
 var _map2_turn = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var _map2_pic = -1;
 
 function initalMap2(){
 	if(_map_deco[1] ==1){
@@ -16,10 +17,8 @@ function initalMap2(){
 				drawImg("map2/card_"+_map2_pair[n]+".png",n%4+3,Math.floor(n/4)+8);
 			}
 		}
-		if(_map2_card2 != -1){
-			drawImg("map2/news_"+_map2_pair[_map2_card2]+".png",11,2);
-		}else if(_map2_card1 != -1){
-			drawImg("map2/news_"+_map2_pair[_map2_card1]+".png",11,2);
+		if(_map2_pic != -1){
+			drawImg("map2/news_"+_map2_pair[_map2_pic]+".png",11,2);
 		}
 	}
 }
@@ -66,6 +65,7 @@ function turnbackCard(n){
 function turnoverCard(n){
 	drawImg("map2/card_"+_map2_pair[n]+".png",n%4+3,Math.floor(n/4)+8);
 	drawImg("map2/news_"+_map2_pair[n]+".png",11,2);
+	_map2_pic = n;
 	deleteEvent(n%4+3,Math.floor(n/4)+8);
 	_map2_turn[n] = 1;
 }
