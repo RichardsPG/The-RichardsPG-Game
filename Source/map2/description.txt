@@ -1,0 +1,20 @@
+=========================================================
+Match Game
+=========================================================
+
+=========================================================
+How to play
+=========================================================
+A 4*4 board with 16 cards on it. Cards'back face player initally.
+Each 2 cards are a pair, threre are totally 8 pairs of cards.
+User can turn over any of the card, then turn over another.
+If the 2 card are the same card, they will still be here.
+Otherwise, they will turn to back phase again.
+Once player turn over a card, a news related to the card will show on right.
+
+=========================================================
+Win
+=========================================================
+After all 8 pair be found, player wins the game.
+game board and related news disappear.
+Door and instruction to the next room shows.

@@ -1,0 +1,18 @@
+===========================================================
+EIS: book food
+===========================================================
+
+===========================================================
+how to play
+===========================================================
+Click "start" button
+3 customer will appear randomly
+each customer will order some "food"
+give him food and he disappear, you got some money
+several second layer he appear again, order "food" again
+You have totally 1 minutes.
+
+===========================================================
+Win
+===========================================================
+The totaly scores you got higher than 15000HK$

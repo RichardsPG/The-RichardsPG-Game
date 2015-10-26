@@ -1,0 +1,13 @@
+===========================================================
+Escape Chamber
+===========================================================
+
+===========================================================
+How to play
+===========================================================
+You should find way to leave the room.
+
+===========================================================
+There is a body, a computer, and something else in the room
+Click the body, you found "open(){Open the door;}" with three lines under "open()"
+Click the computer, type "open()", then you wins.
