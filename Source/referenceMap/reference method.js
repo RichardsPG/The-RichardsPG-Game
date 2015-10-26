@@ -8,6 +8,12 @@ _ctx_1
 //character is draw on it
 _ctx_2
 
+// decoration layer of the map
+// deco_n.png in the mapx folder will be used
+// 0 represent no deco
+_map_deco[x-1] =n
+
+
 //clear the cell on layer 1
 function clearCell(x,y){}
 
