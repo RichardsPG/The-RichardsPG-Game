@@ -18,7 +18,6 @@ var _memo_y;
 var _memo_mapID;
 var _memo_ori;
 
-var _last_event = false;
 
 
 onload = function() {
@@ -58,8 +57,7 @@ function drawImg(src, x, y) {
     var img = new Image();
     img.src = src;
     img.onload = function() {
-        if(!_last_event)
-            _ctx_1.drawImage(img, getX(x), getY(y));
+        _ctx_1.drawImage(img, getX(x), getY(y));
     };
 }
 

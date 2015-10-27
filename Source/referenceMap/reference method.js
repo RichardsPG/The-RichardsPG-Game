@@ -14,11 +14,6 @@ _ctx_2
 _map_deco[x-1] =n
 
 
-// this is for bugs in the frame
-// when you need to update the map deco
-// conduct this statement, otherwise some picture onload
-// will complete loading after update map
-_last_event = true;
 
 
 //clear the cell on layer 1

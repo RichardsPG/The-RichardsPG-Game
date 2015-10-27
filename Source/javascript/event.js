@@ -9,7 +9,6 @@ function startEvent() {
     _memo_ori = _walk_orie;
     _memo_mapID = _map_id;
     _layer_2.onmousedown = null;
-    _last_event = false;
     _event = false;
 
     if (_map_id == 1) {
