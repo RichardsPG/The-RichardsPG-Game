@@ -2,7 +2,8 @@ var C = 40;
 var W = 800 + 2 * C;
 var H = 600 + 2 * C;
 
-var _dos_speed = 50;
+var _dos_speed = 25
+;
 
 var _layer_2 = document.getElementById("layer1");
 var _ctx_2 = _layer_2.getContext("2d");
@@ -17,7 +18,6 @@ var _memo_x;
 var _memo_y;
 var _memo_mapID;
 var _memo_ori;
-
 
 
 onload = function() {
