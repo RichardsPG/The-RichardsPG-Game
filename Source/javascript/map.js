@@ -21,7 +21,7 @@ var _map_enter = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 var _map_event = [];
 
-var _map_deco = [0,1,1,0,1,1,0,1,0];
+var _map_deco = [1,1,1,0,1,1,0,1,0];
 
 
 function enterMap(n) {

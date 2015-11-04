@@ -93,8 +93,6 @@ function winMap2() {
     _last_event = true;
     _map_deco[1] = 2;
     _map_deco[4] = 2;
-    
-
     _door_lock[1][1] = 0;
     _door_lock[1][3] = 0;
     enterMap(2);
