@@ -18,12 +18,13 @@ function initalMap1() {
 		drawImg("map1/square.png", 14, 1+8);
 	if(map1_v[3]!=0)	
 		drawImg("map1/square.png", 14, 2+8);
-	
     map8Update();
 
 }
 
 function startMap1Event(x, y) {
+
+    
     if (x + y * 20 == 156 || x + y * 20 == 157) {
         addEvent(14, 9);
         addEvent(14, 10);
@@ -31,7 +32,7 @@ function startMap1Event(x, y) {
         addEvent(14, 12);
         map1_v = [0, 0, 0, 0];
         map1_s = 1;
-        _ctx_1.clearRect(getX(1),getY(1),19*C,12*C);
+        _ctx_1.clearRect(getX(1),getY(1),19*C,13*C);
         map8Update();
         endEvent();
         return;
@@ -40,6 +41,7 @@ function startMap1Event(x, y) {
 
     drawImg("map1/square.png", 14, y);
     deleteEvent(x, y);
+    drawDos(x, y);
     y -= 9;
 
     if (y == 0)
@@ -68,15 +70,12 @@ function Map1win(){
 	_ctx_1.clearRect(getX(8), getY(1), 11 * C, 2 * C);
     _map_deco[0] = 2;
 	clearInterval(map1_time);
-	deleteEvent(14, 9);
-    deleteEvent(14, 10);
-    deleteEvent(14, 11);
-    deleteEvent(14, 12);
-    deleteEvent(16, 7);
-    deleteEvent(17, 7);
+	_map_event[0] = [];
 
 	_door_lock[0][4] = 0;
 	_door_lock[4][0] = 0;
+    _door_lock[4][7] = 0;
+    _map_deco[4] = 3;
 	enterMap(1);
     endEvent();
 }

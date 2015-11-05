@@ -1,13 +1,13 @@
 
 var _door_lock = [
-    [1, 1, 1, 1, 0, 1, 0, 1],
+    [1, 1, 1, 1, 1, 1, 0, 1],
     [1, 1, 1, 1, 1, 0, 1, 1],
-    [1, 1, 1, 1, 1, 1, 0, 0],
+    [1, 1, 1, 1, 1, 1, 1, 0],
     [1, 1, 1, 0, 1, 1, 1, 1],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [1, 1, 0, 1, 0, 0, 1, 0],
     [0, 1, 0, 1, 1, 1, 1, 1],
-    [1, 0, 1, 1, 1, 0, 1, 1],
+    [1, 1, 1, 1, 1, 0, 1, 1],
     [0, 0, 1, 1, 1, 1, 1, 1],
 ];
 var _door = [];
@@ -21,7 +21,7 @@ var _map_enter = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 var _map_event = [];
 
-var _map_deco = [1,1,1,0,1,1,0,1,0];
+var _map_deco = [1,1,1,0,1,1,0,1,1];
 
 
 function enterMap(n) {
@@ -79,23 +79,23 @@ function checkLeave(x, y) {
     var my = 0;
     if (y == 0) {
         my = -1;
-        if (x < 2) mx = -1;
-        if (x > 17) mx = 1;
+        if (x < 3) mx = -1;
+        if (x > 16) mx = 1;
     } else
     if (x == 0) {
         mx = -1
-        if (y < 2) my = -1;
-        if (y > 12) my = 1;
+        if (y < 3) my = -1;
+        if (y > 11) my = 1;
     } else
     if (y == 14) {
         my = 1;
-        if (x < 2) mx = -1;
-        if (x > 17) mx = 1;
+        if (x < 3) mx = -1;
+        if (x > 16) mx = 1;
     } else
     if (x == 19) {
         mx = 1
-        if (y < 2) my = -1;
-        if (y > 12) my = 1;
+        if (y < 3) my = -1;
+        if (y > 11) my = 1;
     }
     if (mx != 0 || my != 0) {
         clearInterval(_walk_tick);
@@ -206,8 +206,12 @@ function updateSmallMap(n) {
             _map_small_cell[cellID].innerHTML = _map_name[showID - 1];
             if (_map_enter[showID - 1] == 0) {
                 _map_small_cell[cellID].style.background = "grey";
-            } else
-                _map_small_cell[cellID].style.background = "black";
+            } else{
+                if(_map_deco[showID - 1]<2)
+                    _map_small_cell[cellID].style.background = "black";
+                else
+                    _map_small_cell[cellID].style.background = "blue";
+            }
 
         }
     }

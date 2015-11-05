@@ -23,7 +23,7 @@ function initalMap3() {
     	_ctx_1.clearRect(getX(14),getY(4),getX(16),getY(5));
 		_ctx_1.fillStyle="#FF0000";
 		_ctx_1.font = "24px Arial";
-		_ctx_1.fillText("Record: "+_map3_record,getX(14),getY(5.5));
+		_ctx_1.fillText("Record: "+_map3_record,getX(14),getY(3));
     }
 }
 
@@ -137,7 +137,10 @@ function map3Die(){
 	_ctx_1.clearRect(getX(14),getY(4),getX(16),getY(5));
 	_ctx_1.fillStyle="#FF0000";
 	_ctx_1.font = "24px Arial";
-	_ctx_1.fillText("Record: "+_map3_record,getX(14),getY(5.5));
+	_ctx_1.fillText("Record: "+_map3_record,getX(14),getY(3));
+    _door_lock[2][6] = 0;
+    _door_lock[4][2] = 0;
+    _door_lock[4][3] = 0;
 	endEvent();
 }
 

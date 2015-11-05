@@ -24,8 +24,8 @@ function initalMap2() {
 }
 
 function startMap2Event(x, y) {
-	//winMap2();
-        //return;
+	winMap2();
+        return;
     if (_map2_card1 != -1 && _map2_card2 != -1) {
         if (_map2_pair[_map2_card1] != _map2_pair[_map2_card2]) {
             turnbackCard(_map2_card1);
@@ -87,9 +87,7 @@ function updateCard() {
 }
 
 function winMap2() {
-    for (var n = 0; n < 16; n++) {
-        deleteEvent(n % 4 + 3, Math.floor(n / 4) + 8);
-    }
+    _map_event[1] = [];
     _last_event = true;
     _map_deco[1] = 2;
     _map_deco[4] = 2;

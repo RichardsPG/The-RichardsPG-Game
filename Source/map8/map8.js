@@ -44,8 +44,10 @@ function startMap8Event(x, y) {
 }
 
 function winMap8(){
+    _map_event[7] = [];
 	_door_lock[7][1] = 0;
-	_door_lock[4][3] = 0;
+	_door_lock[4][5] = 0;
+    _door_lock[4][3] = 0;
 	_map_deco[7] = 2;
 	enterMap(8);
     endEvent();

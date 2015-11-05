@@ -19,6 +19,9 @@ function moveDos(e) {
             return;
         }
     }
+    if(x<0) x+=1;
+    if(x>19) x-=1;
+    if(y<0) y+=2;
     if (canNotWalk(x, y)) return;
     _goal_x = x;
     _goal_y = y;

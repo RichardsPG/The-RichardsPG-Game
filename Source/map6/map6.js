@@ -1,5 +1,5 @@
 
-_map_event[5] = [42,43,44,45,46,47,48,49];
+_map_event[5] = [22,23,24,25,26,27,28,29];
 
 var _map6_light=[
 [1,0,1,1,0,1,0,1],
@@ -29,8 +29,8 @@ function startMap6Event(x,y){
 function updateMap6Light(){
 	for(var i=0;i<8;i++){
 		if(_map6_open[i]==1)
-			drawImg("map6/light.png",i+2,1);
+			drawImg("map6/light.png",i+2,2);
 		else
-			clearCell(i+2,1);
+			clearCell(i+2,2);
 	}
 }
