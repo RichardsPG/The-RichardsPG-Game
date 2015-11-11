@@ -9,7 +9,7 @@ var event_position = [
     {x:17, y:3, used:false, oppasite:7, receiver:false},
     {x:17, y:6, used:false, oppasite:11, receiver:false},
     {x:9, y:8, used:false, oppasite:0, receiver:true}
-];
+]
 
 var selected_flag = false;
 var previous_ckicked = {x:null, y:null};
