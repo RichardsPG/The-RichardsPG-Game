@@ -34,7 +34,7 @@ function startMap9Event(x,y){
         selected_flag = true;
     } else {
         dismissDrawing(previous_ckicked.x, previous_ckicked.y);
-        if(checkMatch(x, y)) {
+        if(checkMatch9(x, y)) {
             markCorrect(x, y);
             markCorrect(previous_ckicked.x, previous_ckicked.y);
             if(checkGameEnd()) {
@@ -51,7 +51,7 @@ function startMap9Event(x,y){
     endEvent();
 }
 
-function checkMatch(x, y) {
+function checkMatch9(x, y) {
     var supposeOpposite = getSupposeOpposite(x, y);
     if(supposeOpposite.x == previous_ckicked.x && supposeOpposite.y == previous_ckicked.y) {
         return true;
@@ -94,7 +94,7 @@ function setPreviousIncorrect(x1, y1, x2, y2) {
     previousIncorrect.y2 = y2;
 }
 
-function resetPreviousIncorrect(x1, y1, x2, y2) {
+function resetPreviousIncorrect() {
     previousIncorrect.x1 = null;
     previousIncorrect.x2 = null;
     previousIncorrect.y1 = null;
