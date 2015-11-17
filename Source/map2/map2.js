@@ -9,6 +9,7 @@ var _map2_card1 = -1;
 var _map2_card2 = -1;
 var _map2_turn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var _map2_pic = -1;
+var _map2_rec = 0;
 
 function initalMap2() {
     if (_map_deco[1] == 1) {
@@ -20,6 +21,24 @@ function initalMap2() {
         if (_map2_pic != -1) {
             drawImg("map2/news_" + _map2_pair[_map2_pic] + ".png", 11, 2);
         }
+    }
+    if(_map_deco[1]==1){
+        addTB("clear");
+        addTB("You must have seen the circles. Be relax, now is still time for you \
+            to get familiar with the game.")
+        addTB("Interact with this circles, it is just a pair game. When you \
+            interact with a circle, some color will shown. Tow same color \
+            will get paired. Pair all the circles to unclock next 2 rooms.")
+    }else if(_map_deco[1]==2){
+        addTB("clear");
+        addTB("Very easy game, isn't it? I admit.");
+        addTB("Some students ask what they will learn in our department. Actually \
+            we will learn how to programming and how to design a software");
+        addTB("Oh! By the way, found the news on the right side? I mean, computer \
+            is a professional discipline.");
+        addTB("By the by the way, do you still remember that...choice is very \
+            important, the flap of a butterfly's wings in Brazil sett off a tornado \
+            in Texas.");
     }
 }
 
@@ -44,13 +63,16 @@ function startMap2Event(x, y) {
     }
 
     var i;
+    var j = 0;
     for (i = 0; i < 16; i++) {
-        if (_map2_turn[i] == 0)
-            break;
+        if (_map2_turn[i] != 0)
+            j++;
     }
+    _map2_rec = j * 7;
+    updateScore();
 
 
-    if (i == 16) {
+    if (j == 16) {
         winMap2();
         return;
     }

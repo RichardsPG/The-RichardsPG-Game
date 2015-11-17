@@ -8,7 +8,27 @@ var map8_kb = ["1234567890", "QWERTYUIOP",
 ];
 var map8_pass = "";
 
-function initalMap8() {}
+var _map8_rec = 0;
+
+function initalMap8() {
+    if(_map_deco[7]==1){
+        addTB("clear");
+        addTB("Try to leave the room through another door. Remember you \
+            are come in this room for programming.");
+    }else if(_map_deco[7]==2){
+        addTB("clear");
+        addTB("Congratulations");
+        addTB("The way you open the door is a very important skill in \
+            programming: it called function. You will know more about it \
+            if you choose our department.");
+        addTB("Learning Computer program will involve learning how to use \
+            some programming languages to write programs.");
+        addTB("The first time people see programming, they may think it \
+            horrible. But if you have talked to the bodies, you will found \
+            that, their last words are funny. Actually, if you are will to \
+            try this, you will found programming more and more interesting.");
+    }
+}
 
 function startMap8Event(x, y) {
     var temp = x + y * 20;
@@ -44,6 +64,13 @@ function startMap8Event(x, y) {
 }
 
 function winMap8(){
+
+    _map8_rec = 70;
+    updateScore();
+    _door_lock[7][5] = 1;
+    _door_lock[1][1] = 1;
+
+
     _map_event[7] = [];
 	_door_lock[7][1] = 0;
 	_door_lock[4][5] = 0;
@@ -51,6 +78,7 @@ function winMap8(){
 	_map_deco[7] = 2;
 	enterMap(8);
     endEvent();
+
 }
 
 function map8body() {

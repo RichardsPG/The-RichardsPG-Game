@@ -5,6 +5,7 @@ var map1_s = 1;
 var map1_time;
 var map1_mode = 0;
 var map1_now = 0;
+var _map1_rec = 0;
 
 function initalMap1() {
 	if(map1_mode==200){
@@ -156,6 +157,13 @@ function map1_tick() {
             map1_v[3] = 3;
             map1_s = 14;
             return;
+        }
+
+        var t_rec = (map1_v[0]+map1_v[1]+map1_v[2]+map1_v[3]);
+        t_rec *=7;
+        if(t_rec>_map1_rec){
+            _map1_rec = t_rec;
+            updateScore();
         }
         if(map1_v[0]+map1_v[1]+map1_v[2]+map1_v[3]==13){
         	map1_mode = 200;

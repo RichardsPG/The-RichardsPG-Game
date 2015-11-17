@@ -5,6 +5,27 @@ function initalMap5(){
 	if(_map_event[4].indexOf(229)!=-1){
 		drawImg(_door_src,9,11);
 	}
+    if(_map_deco[4]==1){
+        addTB("clear");
+        addTB("Good Morning, You may have no idea why you are here. \
+            Don't worry, just try the game ahead, it is not hard.");
+        addTB("Oh, by the way. Remember, please, the choice you made \
+            in the early game realy affect later stage.")
+    }
+    if(_map_deco[4]==2){
+        addTB("clear");
+        addTB("Welcome back. Do you still remember the room? It is the \
+         room you begin the game.");
+        addTB("You can go through match game to exprience another ganme. \
+            Or you can goto choice room for next stage");
+        addTB("To tell you the truth. Computer Science means study com\
+            puters, means write program, means learning using software. \
+            you can focus part of them or try to learn all of them. \
+            Computer Science student can also be different style.");
+    }
+    if(_map_deco[4]==3){
+        
+    }
 }
 
 function startMap5Event(x,y){

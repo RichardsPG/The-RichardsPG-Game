@@ -19,6 +19,13 @@ var _memo_y;
 var _memo_mapID;
 var _memo_ori;
 
+var _score;
+var _times;
+var _timer;
+
+var _tb = document.getElementById("tb");
+
+
 
 onload = function() {
     init();
@@ -45,7 +52,47 @@ function init() {
 
     _layer_2.onmousedown = moveDos;
 
-    
+    _times = 0;
+    _score = 0;
+    _timer = setInterval(mainTime,1000);
+}
+
+function addTB(str){
+	if(str=="clear"){
+		_tb.innerHTML = "";
+		return;
+	}
+	_tb.innerHTML += "<p>"+str+"</p>";
+}
+
+function mainTime(){
+	_times++;
+	if(_times>3600) _times = 0;
+	updateMT();
+}
+
+function updateMT(){
+	_ctx_1.clearRect(0,0,W,C);
+	_ctx_1.fillStyle = "white";
+    _ctx_1.font = "30px Arial";
+    var m = Math.floor(_times/60);
+    var s = _times%60;
+    var str = "Time: "
+    if(m<10) str += "0"+m+":";
+    else str += m+":";
+    if(s<10) str += "0"+s;
+    else str += s;
+    _ctx_1.fillText(str, getX(1), getY(-1));
+    _ctx_1.fillText("Score: "+_score, getX(12),getY(-1));
+}
+
+function updateScore(){
+	_score = 0;
+	_score += _map1_rec+_map2_rec+(_map3_record+1)*7;
+	_score += _map8_rec;
+    _score += _map6_li*7;
+    _score += m4s*7;
+	updateMT();
 }
 
 
