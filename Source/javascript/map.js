@@ -77,25 +77,27 @@ function initialMap(n){
 function checkLeave(x, y) {
     var mx = 0;
     var my = 0;
-    if (y == 0) {
+    var t = x+y*20;
+    if(t*(t-1)*(t-20)==0){
+        mx = -1;
         my = -1;
-        if (x < 3) mx = -1;
-        if (x > 16) mx = 1;
-    } else
-    if (x == 0) {
-        mx = -1
-        if (y < 3) my = -1;
-        if (y > 11) my = 1;
-    } else
-    if (y == 14) {
+    }else if((t-9)*(t-10)==0){
+        my = -1;
+    }else if((t-18)*(t-19)*(t-39)==0){
+        my = -1;
+        mx = 1;
+    }else if((t-159)*(t-179)==0){
+        mx = 1;
+    }else if((t-279)*(t-299)*(t-298)==0){
+        mx = 1;
         my = 1;
-        if (x < 3) mx = -1;
-        if (x > 16) mx = 1;
-    } else
-    if (x == 19) {
-        mx = 1
-        if (y < 3) my = -1;
-        if (y > 11) my = 1;
+    }else if((t-289)*(t-290)==0){
+        my = 1;
+    }else if((t-260)*(t-280)*(t-281)==0){
+        mx = -1;
+        my = 1;
+    }else if((t-140)*(t-160)==0){
+        mx = -1;
     }
     if (mx != 0 || my != 0) {
         clearInterval(_walk_tick);

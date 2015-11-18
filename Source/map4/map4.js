@@ -5,6 +5,16 @@ var map4Str = [[],[],[]];
 var m4n = 0;
 var m4s = 0;
 
+function gameOver(){
+	_layer_2.onmousedown = null;
+	clearInterval(_timer);
+	addTB("clear");
+    addTB("Thank you for playing the game. This the end \
+    	of the game. If you have interest in our department \
+    	this is the link. <a href='http://www.comp.polyu.edu.hk/' \
+    	target = 'blank'>Click Me~</a>");
+}
+
 function initalMap4(){
 	if(map4talk==null){
 		map4talk = new Image();
@@ -50,7 +60,8 @@ function map4Next(){
 	}
 	m4n++;
 	if(m4n==map4Str[0].length){
-		_layer_2.onmousedown = null;
+		gameOver();
+		
 	}
 	
 }
@@ -157,7 +168,7 @@ function map4StrIni(){
 	map4Mark(0,4,"If you choose the other, I will give you some marks.");
 	dosTalk(2,"Then, let's begin the game!");
 
-	dosTalk(2,"Hi, Apple! It is very nice to meet you here!");
+	/*dosTalk(2,"Hi, Apple! It is very nice to meet you here!");
 	youChose("I'm Peter","Me too");
 	map4Mark(0,3,"Sorry...since your name is very hard to remember.");
 	map4Mark(2,2,"You seems good~");
@@ -286,7 +297,7 @@ function map4StrIni(){
 	dosTalk(2,"Will you choose our department?");
 	youChose("Yes","No");
 	map4Mark(3,1,"Thank you very much~");
-	map4Mark(0,3,"I'm almost crying...");
+	map4Mark(0,3,"I'm almost crying...");*/
 
 
 	dosTalk(2,"Thank you for playing.");

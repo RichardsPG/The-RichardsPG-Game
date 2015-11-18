@@ -43,8 +43,8 @@ function initalMap2() {
 }
 
 function startMap2Event(x, y) {
-	winMap2();
-        return;
+	//winMap2();
+    //    return;
     if (_map2_card1 != -1 && _map2_card2 != -1) {
         if (_map2_pair[_map2_card1] != _map2_pair[_map2_card2]) {
             turnbackCard(_map2_card1);
