@@ -20,6 +20,7 @@ var map7_selected_product = {x:null, y:null};
 var map7_previous_incorrect = {x:null, y:null};
 
 function initalMap7(){
+    drawImg("map7/customer_" + '1' + ".png", 5, 10);
 }
 
 function startMap7Event(x,y){

@@ -22,6 +22,9 @@ var previous_ckicked = {x:null, y:null};
 var previousIncorrect = {x1:null, y1:null, x2:null, y2:null};
 
 function initalMap9(){
+    addTB("clear");
+    addTB('Hey! You know what? You can do anything with a computer. But only if you can program it right.<br>You have to organize the programs right if you want to do things well.');
+    addTB('What you are seeing now are functions with missing content.  Match them back!');
 }
 
 function startMap9Event(x,y){
@@ -38,7 +41,10 @@ function startMap9Event(x,y){
             markCorrect(x, y);
             markCorrect(previous_ckicked.x, previous_ckicked.y);
             if(checkGameEnd()) {
-                alert('Finished');
+                _door_lock[8][0] = 0;
+                _door_lock[8][1] = 0;
+                addTB("clear");
+                addTB('So you are an organized people.  Computing is the same.  You have to organize your code in a good way.');
             }
         } else {
             markIncorrect(x, y);
