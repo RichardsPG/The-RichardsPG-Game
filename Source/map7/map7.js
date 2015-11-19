@@ -15,6 +15,7 @@ var selected_flag = false;
 var map7_selected_product = {x:null, y:null};
 var map7_previous_incorrect = {x:null, y:null};
 var currentCustomer = -1;
+var _map7_rec = 0;
 
 function initalMap7(){
     updateCustomer();
@@ -39,6 +40,8 @@ function startMap7Event(x,y){
             map7MarkSelected(x, y);
         } else {
             if(map7CheckMatch()) {
+                _map7_rec += 5;
+                updateScore();
                 map7MarkCorrect(map7_selected_product.x, map7_selected_product.y);
                 map7MarkUsed(map7_selected_product.x, map7_selected_product.y);
                 updateCustomer();
@@ -53,6 +56,8 @@ function startMap7Event(x,y){
                     addTB('Go!  Go to the next room.')
                 }
             } else {
+                _map7_rec -= 5;
+                updateScore();
                 map7MarkIncorrect(map7_selected_product.x, map7_selected_product.y);
                 map7SetIncorrect(map7_selected_product.x, map7_selected_product.y);
             }

@@ -25,7 +25,7 @@ function initalMap2() {
     if(_map_deco[1]==1){
         addTB("clear");
         addTB("You must have seen the circles. Be relax, now is still time for you \
-            to get familiar with the game.")
+            to get familiar with the game.");
         addTB("Interact with this circles, it is just a pair game. When you \
             interact with a circle, some color will shown. Tow same color \
             will get paired. Pair all the circles to unclock next 2 rooms.")

@@ -92,6 +92,7 @@ function updateScore(){
 	_score += _map8_rec;
     _score += _map6_li*7;
     _score += m4s*7;
+    _score += _map7_rec;
 	updateMT();
 }
 
