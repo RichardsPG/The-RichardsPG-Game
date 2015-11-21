@@ -43,6 +43,9 @@ function startMap9Event(x,y){
             if(checkGameEnd()) {
                 _door_lock[8][0] = 0;
                 _door_lock[8][1] = 0;
+                _door_lock[4][4] = 0;
+                _door_lock[4][7] = 0;
+                _map_deco[4] = 3;
                 addTB("clear");
                 addTB('So you are an organized people.  Computing is the same.  You have to organize your code in a good way.');
             }

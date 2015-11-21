@@ -50,6 +50,9 @@ function startMap7Event(x,y){
                     deleteEvent(x, y);
                     _door_lock[6][0] = 0;
                     _door_lock[6][2] = 0;
+                    _door_lock[4][6] = 0;
+                    _door_lock[4][7] = 0;
+                    _map_deco[4] = 3;
                     addTB("clear");
                     addTB('Finally! Those customers had gone.');
                     addTB('Computing is so much more than just programming.  Being a computing student, you have to understand the needs of the customers.');

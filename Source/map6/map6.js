@@ -17,14 +17,14 @@ var _map6_li = 0;
 
 function initalMap6() {
     updateMap6Light();
-    if (_map_deco[7] == 1) {
+    if (_map_deco[5] == 1) {
         addTB("clear");
         addTB("Upper side is a game of open the light.Each switch controls \
         	several lights to open all the lights.");
-        addTB("For example, Button 1 controls Light 1 3 4 5 7.");
+        addTB("For example, Switch 1 controls Light 1 3 4 5 7.");
         addTB("You have 30 seconds. Open as more light as possible.");
         addTB("By the way, I lock the door just now~");
-    } else if (_map_deco[7] == 2) {
+    } else if (_map_deco[5] == 2) {
         addTB("clear");
         addTB("If you have not open all the lights yet, now you have unlimited \
     		time to try. However, you will not get scores.");

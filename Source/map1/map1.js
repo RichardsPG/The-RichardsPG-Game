@@ -20,13 +20,13 @@ function initalMap1() {
 	if(map1_v[3]!=0)	
 		drawImg("map1/square.png", 14, 2+8);
     map8Update();
-    if(_map3_record==-1){
+    if( _map_deco[0] == 1){
         addTB("clear");
         addTB("Oh, someone seems here. Try to find out who is he.");
-        addTB("You can ask 4 questions in this room. Ask the questions in \
+        addTB("Ask the questions in \
             the game. Asking the questions in right sequence lets you \
             pass the level.")
-    }else{
+    }else  if( _map_deco[0] == 2){
         addTB("clear");
         addTB("Yean, the one you find is google. The sequence you ask the \
             questions is the sequence to connect Network.");
