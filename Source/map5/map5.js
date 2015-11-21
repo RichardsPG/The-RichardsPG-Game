@@ -1,10 +1,7 @@
 
-_map_event[4] = [64,104,164,224];
+_map_event[4] = [];
 
 function initalMap5(){
-	if(_map_event[4].indexOf(229)!=-1){
-		drawImg(_door_src,9,11);
-	}
     if(_map_deco[4]==1){
         addTB("clear");
         addTB("Good Morning, You may have no idea why you are here. \
@@ -24,7 +21,13 @@ function initalMap5(){
             Computer Science student can also be different style.");
     }
     if(_map_deco[4]==3){
-        
+        addTB("clear");
+        addTB("You have already passed one of the stream. No you can \
+            fight Boss.");
+        addTB("If you are interested in the other rooms, you can try \
+            them now. Caution, once you begin finghting boss, the game \
+            comes to its end. No matter you kill the Boss or killed by \
+            the boss. LOL.");
     }
 }
 

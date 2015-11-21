@@ -19,11 +19,19 @@ var _map3_timer;
 
 function initalMap3() {
     updateMap3();
-    if(_map3_record!=-1){
-    	_ctx_1.clearRect(getX(14),getY(4),getX(16),getY(5));
-		_ctx_1.fillStyle="#FF0000";
-		_ctx_1.font = "24px Arial";
-		_ctx_1.fillText("Record: "+_map3_record,getX(14),getY(3));
+    if(_map3_record==-1){
+        addTB("clear");
+        addTB("Now you are going to design a game. The game is similar to \
+            flappy bird. Where the bird can either touch the ceil or floor. \
+            Also touching the pipe will kill the bird.");
+        addTB("Interact with the black circleto Adjust the parameter of the \
+            game. Try to make the game neither \
+            too difficult or too easy. After playing the game yourself as \
+            testing, you can pass this level.")
+    }else{
+        addTB("clear");
+        addTB("Good job. How do you fell about the game design by yourself?");
+        addTB("Ok, go to next room to enjoy you game~");
     }
 }
 
@@ -51,17 +59,17 @@ function startMap3Event(x, y) {
 }
 
 function updateMap3() {
+    _ctx_1.clearRect(0,0,W,H);
     drawImg("map3/back_" + _map3_off[1] + ".png", 2, 2);
-    clearCell(13, 8);
-    clearCell(14, 8);
-    clearCell(13, 10);
-    clearCell(14, 10);
-    clearCell(13, 12);
-    clearCell(14, 12);
-    _ctx_1.clearRect(getX(2), getY(2), getX(8), getY(12));
     drawImg("map3/chose_" + _map3_off[0] + ".png", 13, 8);
     drawImg("map3/chose_" + _map3_off[1] + ".png", 13, 10);
     drawImg("map3/chose_" + _map3_off[2] + ".png", 13, 12);
+    if(_map3_record!=-1){
+        _ctx_1.fillStyle="#FF0000";
+        _ctx_1.font = "24px Arial";
+        _ctx_1.clearRect(getX(14),getY(6),3*C,C);
+        _ctx_1.fillText("Record: "+_map3_record,getX(14),getY(7));
+    }
 }
 
 function map3Tick() {
@@ -134,13 +142,12 @@ function map3Die(){
 	if(_map3_score*(2-_map3_off[0])>_map3_record){
 		_map3_record = _map3_score*(2-_map3_off[0]);
 	}
-	_ctx_1.clearRect(getX(14),getY(4),getX(16),getY(5));
-	_ctx_1.fillStyle="#FF0000";
-	_ctx_1.font = "24px Arial";
-	_ctx_1.fillText("Record: "+_map3_record,getX(14),getY(3));
+	initalMap3();
     _door_lock[2][6] = 0;
     _door_lock[4][2] = 0;
     _door_lock[4][3] = 0;
+    _door_lock[1][3] = 1;
+    _door_lock[2][7] = 1;
 	endEvent();
 }
 

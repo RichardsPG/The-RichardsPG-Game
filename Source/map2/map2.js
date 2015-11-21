@@ -68,8 +68,10 @@ function startMap2Event(x, y) {
         if (_map2_turn[i] != 0)
             j++;
     }
-    _map2_rec = j * 7;
-    updateScore();
+    if(_map2_card1 != -1 && _map2_pair[_map2_card1] == _map2_pair[_map2_card2]){
+        _map2_rec = j * 7;
+        updateScore();
+    }
 
 
     if (j == 16) {
@@ -96,6 +98,7 @@ function turnoverCard(n) {
 }
 
 function updateCard() {
+    _ctx_1.clearRect(getX(11),getY(1),13*C,6*C);
     for (var n = 0; n < 16; n++) {
         if (_map2_turn[n] == 1) {
             drawImg("map2/card_" + _map2_pair[n] + ".png", n % 4 + 3, Math.floor(n / 4) + 8);

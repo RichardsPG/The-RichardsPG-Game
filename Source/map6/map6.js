@@ -76,7 +76,7 @@ function startMap6Event(x, y) {
         updateMap6Light();
         endEvent();
     }
-    if (_map_deco[7] == 1 && _map6_20 == null) {
+    if (_map_deco[5] == 1 && _map6_20 == null) {
         _map6_20 = setInterval(Map6_20, 1000);
     }
     x = x - 2;
